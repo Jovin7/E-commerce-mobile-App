@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Rolex Submariner",
+      "category": "Watches",
+      "subCategory": "Male",
+      "description": "Luxury stainless steel diving watch.",
+      "thumbnailURL": "",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "2",
+      "name": "Apple Watch Series 10",
+      "category": "Watches",
+      "subCategory": "Unisex",
+      "description": "Smartwatch with health and fitness tracking.",
+      "thumbnailURL": "",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "3",
+      "name": "Nike Air Max",
+      "category": "Footwear",
+      "subCategory": "Male",
+      "description": "Comfortable running shoes for daily use.",
+      "thumbnailURL": "",
+      "modelCategory": "Shoe"
+    },
+    {
+      "id": "4",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "",
+      "modelCategory": "Sunglasses"
+    },
+    {
+      "id": "5",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "",
+      "modelCategory": "Bag"
+    }
+  ]
+}

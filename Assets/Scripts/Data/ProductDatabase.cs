@@ -20,4 +20,7 @@ public class ProductData
     public string description;
     public string thumbnailURL;
     public string modelCategory;
+   
+    
 }
+

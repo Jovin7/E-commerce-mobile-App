@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class ProductManager : MonoBehaviour
 {
@@ -17,14 +18,18 @@ public class ProductManager : MonoBehaviour
 
     public event Action<ProductDatabase> OnProductsLoaded;
 
+    public ProductData SelectedProduct = null;
 
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
+        else
+            Destroy(this.gameObject);
        
         DontDestroyOnLoad(this.gameObject);
     }
+  
     private async void Start()
     {
 
@@ -38,5 +43,9 @@ public class ProductManager : MonoBehaviour
 
     }
 
+  
+
 
 }
+
+

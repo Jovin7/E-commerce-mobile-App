@@ -1188,6 +1188,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     products: []
+  SelectedProduct:
+    id: 
+    name: 
+    category: 
+    subCategory: 
+    description: 
+    thumbnailURL: 
+    modelCategory: 
+  isFirsTime: 0
 --- !u!1 &903526483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1636,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ReferenceResolution: {x: 1080, y: 2400}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -1702,6 +1711,7 @@ MonoBehaviour:
   productDescription: {fileID: 2033955973}
   productImage: {fileID: 3359987596087754715}
   backButton: {fileID: 1280520107}
+  view3DButton: {fileID: 119459433}
 --- !u!1 &1463780431
 GameObject:
   m_ObjectHideFlags: 0

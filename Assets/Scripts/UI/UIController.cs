@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -19,19 +20,15 @@ public class UIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI productDescription;
     [SerializeField] private Image productImage;
     [SerializeField] private Button backButton;
-
+    [SerializeField] private Button view3DButton;
+    private ProductData selectedProduct;
     private IThumbnailLoaderService thumbnailLoaderService;
     
     private void OnEnable()
     {
         ProductManager.Instance.OnProductsLoaded += PopulateGrid;
         backButton.onClick.AddListener(OnBackButtonClicked);
-
-    }
-
-    private void OnBackButtonClicked()
-    {
-        EnableDetailPanel(false);
+        view3DButton.onClick.AddListener(OnView3DClicked);
     }
 
     private void OnDisable()
@@ -41,6 +38,10 @@ public class UIController : MonoBehaviour
     void Start()
     {
         thumbnailLoaderService = new ThumbnailLoaderService();
+        if (ProductManager.Instance.SelectedProduct.name != "")
+        {
+            OnItemSelected(ProductManager.Instance.SelectedProduct);
+        }
     }
 
     private void PopulateGrid(ProductDatabase database)
@@ -56,6 +57,7 @@ public class UIController : MonoBehaviour
 
     private async void OnItemSelected(ProductData data)
     {
+        selectedProduct = data;
         EnableDetailPanel(true);
         productName.text = data.name;
         category.text = data.category;
@@ -65,9 +67,26 @@ public class UIController : MonoBehaviour
         if (sprite != null)
             productImage.sprite = sprite;
     }
+    private void OnView3DClicked()
+    {
+        ProductManager.Instance.SelectedProduct = selectedProduct;
 
+        SceneManager.LoadScene("Product3DScene");
+    }
+
+    private void OnBackButtonClicked()
+    {
+        EnableDetailPanel(false);
+
+        if (ProductManager.Instance.SelectedProduct != null)
+        {
+            ProductManager.Instance.SelectedProduct = null;
+            PopulateGrid(ProductManager.Instance.data);
+        }
+    }
     private void EnableDetailPanel(bool v)
     {
+        Debug.Log("Erro");
         detailScreenPanel.gameObject.SetActive(v);
         homeScreenPanel.gameObject.SetActive(!v);
     }

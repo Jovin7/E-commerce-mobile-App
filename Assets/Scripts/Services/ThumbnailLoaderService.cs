@@ -11,7 +11,11 @@ public class ThumbnailLoaderService : IThumbnailLoaderService
     public async Task<Sprite> LoadThumbnailAsync(string url)
     {
         Texture2D texture;
-
+        if (string.IsNullOrWhiteSpace(url))
+        {
+            Debug.LogError("Invalid thumbnail URL");
+            return null;
+        }
         if (cache.TryGetValue(url, out texture))
         {
             Debug.Log($"Loaded from cache: {url}");
@@ -47,3 +51,4 @@ public class ThumbnailLoaderService : IThumbnailLoaderService
 
     }
 }
+

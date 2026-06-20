@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CatalogueScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Product3DScene.unity
+    guid: ea181e5aee8f31f4ca541415909377d1
   m_configObjects: {}

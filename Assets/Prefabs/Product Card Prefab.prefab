@@ -257,6 +257,7 @@ MonoBehaviour:
   category: {fileID: 797663527202261875}
   subCategory: {fileID: 5352848053481355982}
   thumbnailImage: {fileID: 9180305549167106854}
+  onclickButton: {fileID: 2771009336711790054}
 --- !u!114 &2771009336711790054
 MonoBehaviour:
   m_ObjectHideFlags: 0

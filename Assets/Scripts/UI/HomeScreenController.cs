@@ -10,9 +10,10 @@ public class HomeScreenController : MonoBehaviour
     [SerializeField]
     private ProductCardView productCardPrefab;
 
+    private IThumbnailLoaderService thumbnailLoaderService;
+    
     private void OnEnable()
     {
-
         ProductManager.Instance.OnProductsLoaded += PopulateGrid;
     }
 
@@ -22,7 +23,7 @@ public class HomeScreenController : MonoBehaviour
     }
     void Start()
     {
-        
+        thumbnailLoaderService = new ThumbnailLoaderService();
     }
 
     private void PopulateGrid(ProductDatabase database)
@@ -30,7 +31,8 @@ public class HomeScreenController : MonoBehaviour
         foreach (var product in database.products)
         {
             ProductCardView card = Instantiate(productCardPrefab, gridViewParent);
-            card.Initialize(product);
+            card.Initialize(product,thumbnailLoaderService);
+            _ = card.LoadThumbnailAsync();
         }
     }
 }

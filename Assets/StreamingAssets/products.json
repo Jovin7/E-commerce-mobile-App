@@ -6,7 +6,7 @@
       "category": "Watches",
       "subCategory": "Male",
       "description": "Luxury stainless steel diving watch.",
-      "thumbnailURL": "",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
     },
     {
@@ -15,7 +15,7 @@
       "category": "Watches",
       "subCategory": "Unisex",
       "description": "Smartwatch with health and fitness tracking.",
-      "thumbnailURL": "",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
     },
     {
@@ -24,7 +24,7 @@
       "category": "Footwear",
       "subCategory": "Male",
       "description": "Comfortable running shoes for daily use.",
-      "thumbnailURL": "",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Shoe"
     },
     {
@@ -33,7 +33,7 @@
       "category": "Accessories",
       "subCategory": "Unisex",
       "description": "Classic aviator sunglasses.",
-      "thumbnailURL": "",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Sunglasses"
     },
     {
@@ -42,7 +42,7 @@
       "category": "Bags",
       "subCategory": "Female",
       "description": "Premium leather backpack for travel and work.",
-      "thumbnailURL": "",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Bag"
     }
   ]

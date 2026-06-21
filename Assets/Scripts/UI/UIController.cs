@@ -8,32 +8,39 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    [Header("HomeScreenPanel")]
-    [SerializeField] private Transform homeScreenPanel;
-    [SerializeField] private Transform gridViewParent;
+    [Header("ViewsPanel")]
+    [SerializeField] private PortraitView portraitView;
+    [SerializeField] private LandscapeView landscapeView;
     [SerializeField] private ProductCardView productCardPrefab;
-    [Header("DetailScreenPanel")]
-    [SerializeField] private Transform detailScreenPanel;
-    [SerializeField] private TextMeshProUGUI productName;
-    [SerializeField] private TextMeshProUGUI category;
-    [SerializeField] private TextMeshProUGUI subCategory;
-    [SerializeField] private TextMeshProUGUI productDescription;
-    [SerializeField] private Image productImage;
-    [SerializeField] private Button backButton;
-    [SerializeField] private Button view3DButton;
+
+    private IHomeView activeHomeView;
+    private IDetailView activeDetailView;
+
     private ProductData selectedProduct;
     private IThumbnailLoaderService thumbnailLoaderService;
-    
+
+
+    private void Awake()
+    {
+        bool isLandscape = Screen.width > Screen.height;
+        portraitView.gameObject.SetActive(!isLandscape);
+        landscapeView.gameObject.SetActive(isLandscape);
+
+        activeHomeView = isLandscape ? (IHomeView)landscapeView : portraitView;
+        activeDetailView = isLandscape ? (IDetailView)landscapeView : portraitView;
+    }
     private void OnEnable()
     {
         ProductManager.Instance.OnProductsLoaded += PopulateGrid;
-        backButton.onClick.AddListener(OnBackButtonClicked);
-        view3DButton.onClick.AddListener(OnView3DClicked);
+        activeDetailView.OnBackButtonRequested += OnBackButtonClicked;
+        activeDetailView.OnView3DRequested += OnView3DClicked;
     }
 
     private void OnDisable()
     {
         ProductManager.Instance.OnProductsLoaded -= PopulateGrid;
+        activeDetailView.OnBackButtonRequested -= OnBackButtonClicked;
+        activeDetailView.OnView3DRequested -= OnView3DClicked;
     }
     void Start()
     {
@@ -48,9 +55,8 @@ public class UIController : MonoBehaviour
     {
         foreach (var product in database.products)
         {
-            ProductCardView card = Instantiate(productCardPrefab, gridViewParent);
-            card.Initialize(product,thumbnailLoaderService, OnItemSelected);
-            
+            ProductCardView card = Instantiate(productCardPrefab, activeHomeView.GridParent);
+            card.Initialize(product, thumbnailLoaderService, OnItemSelected);
             _ = card.LoadThumbnailAsync();
         }
     }
@@ -59,13 +65,12 @@ public class UIController : MonoBehaviour
     {
         selectedProduct = data;
         EnableDetailPanel(true);
-        productName.text = data.name;
-        category.text = data.category;
-        subCategory.text = data.subCategory;
-        productDescription.text = data.description;
+        activeDetailView.SetProductInfo(data);
         var sprite = await thumbnailLoaderService.LoadThumbnailAsync(data.thumbnailURL);
         if (sprite != null)
-            productImage.sprite = sprite;
+            activeDetailView.SetProductSprite(sprite);
+
+
     }
     private void OnView3DClicked()
     {
@@ -86,8 +91,8 @@ public class UIController : MonoBehaviour
     }
     private void EnableDetailPanel(bool v)
     {
-        Debug.Log("Erro");
-        detailScreenPanel.gameObject.SetActive(v);
-        homeScreenPanel.gameObject.SetActive(!v);
+        
+        activeDetailView.SetDetailActive(v);
+        activeHomeView.SetHomeActive(!v);
     }
 }

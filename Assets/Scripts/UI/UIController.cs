@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private PortraitView portraitView;
     [SerializeField] private LandscapeView landscapeView;
     [SerializeField] private ProductCardView productCardPrefab;
+    [SerializeField] private VirtualizedGridScrollView virtualizedGridScroll;
 
     private IHomeView activeHomeView;
     private IDetailView activeDetailView;
@@ -45,22 +46,26 @@ public class UIController : MonoBehaviour
     void Start()
     {
         thumbnailLoaderService = new ThumbnailLoaderService();
-        if (ProductManager.Instance.SelectedProduct.name != "")
+        if (ProductManager.Instance.isSceneLoaded)
         {
+
             OnItemSelected(ProductManager.Instance.SelectedProduct);
         }
     }
 
+
     private void PopulateGrid(ProductDatabase database)
     {
-        foreach (var product in database.products)
-        {
-            ProductCardView card = Instantiate(productCardPrefab, activeHomeView.GridParent);
-            card.Initialize(product, thumbnailLoaderService, OnItemSelected);
-            _ = card.LoadThumbnailAsync();
-        }
+        virtualizedGridScroll.Initialize(database, productCardPrefab,activeHomeView.GridParent, activeHomeView.ScrollRect, thumbnailLoaderService, OnItemSelected,activeHomeView.LayoutSettings);
     }
 
+  
+    private void Update()
+    {
+
+       
+    }
+    
     private async void OnItemSelected(ProductData data)
     {
         selectedProduct = data;
@@ -83,15 +88,16 @@ public class UIController : MonoBehaviour
     {
         EnableDetailPanel(false);
 
-        if (ProductManager.Instance.SelectedProduct != null)
+        if (ProductManager.Instance.isSceneLoaded)
         {
+            ProductManager.Instance.isSceneLoaded = false;
             ProductManager.Instance.SelectedProduct = null;
             PopulateGrid(ProductManager.Instance.data);
         }
     }
     private void EnableDetailPanel(bool v)
     {
-        
+
         activeDetailView.SetDetailActive(v);
         activeHomeView.SetHomeActive(!v);
     }

@@ -44,6 +44,339 @@
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
+    },
+     {
+      "id": "6",
+      "name": "Rolex Submariner",
+      "category": "Watches",
+      "subCategory": "Male",
+      "description": "Luxury stainless steel diving watch.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "7",
+      "name": "Apple Watch Series 10",
+      "category": "Watches",
+      "subCategory": "Unisex",
+      "description": "Smartwatch with health and fitness tracking.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "8",
+      "name": "Nike Air Max",
+      "category": "Footwear",
+      "subCategory": "Male",
+      "description": "Comfortable running shoes for daily use.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Shoe"
+    },
+    {
+      "id": "9",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "10",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+        {
+      "id": "11",
+      "name": "Apple Watch Series 10",
+      "category": "Watches",
+      "subCategory": "Unisex",
+      "description": "Smartwatch with health and fitness tracking.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "12",
+      "name": "Nike Air Max",
+      "category": "Footwear",
+      "subCategory": "Male",
+      "description": "Comfortable running shoes for daily use.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Shoe"
+    },
+    {
+      "id": "13",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "14",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+     {
+      "id": "16",
+      "name": "Rolex Submariner",
+      "category": "Watches",
+      "subCategory": "Male",
+      "description": "Luxury stainless steel diving watch.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "16",
+      "name": "Apple Watch Series 10",
+      "category": "Watches",
+      "subCategory": "Unisex",
+      "description": "Smartwatch with health and fitness tracking.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "17",
+      "name": "Nike Air Max",
+      "category": "Footwear",
+      "subCategory": "Male",
+      "description": "Comfortable running shoes for daily use.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Shoe"
+    },
+    {
+      "id": "18",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "19",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+     {
+      "id": "20",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "21",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "22",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+        {
+      "id": "23",
+      "name": "Apple Watch Series 10",
+      "category": "Watches",
+      "subCategory": "Unisex",
+      "description": "Smartwatch with health and fitness tracking.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "24",
+      "name": "Nike Air Max",
+      "category": "Footwear",
+      "subCategory": "Male",
+      "description": "Comfortable running shoes for daily use.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Shoe"
+    },
+    {
+      "id": "25",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "26",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "27",
+      "name": "Apple Watch Series 10",
+      "category": "Watches",
+      "subCategory": "Unisex",
+      "description": "Smartwatch with health and fitness tracking.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "28",
+      "name": "Nike Air Max",
+      "category": "Footwear",
+      "subCategory": "Male",
+      "description": "Comfortable running shoes for daily use.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Shoe"
+    },
+    {
+      "id": "29",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "30",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "31",
+      "name": "Rolex Submariner",
+      "category": "Watches",
+      "subCategory": "Male",
+      "description": "Luxury stainless steel diving watch.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "32",
+      "name": "Apple Watch Series 10",
+      "category": "Watches",
+      "subCategory": "Unisex",
+      "description": "Smartwatch with health and fitness tracking.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "33",
+      "name": "Nike Air Max",
+      "category": "Footwear",
+      "subCategory": "Male",
+      "description": "Comfortable running shoes for daily use.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Shoe"
+    },
+    {
+      "id": "34",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "35",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+     {
+      "id": "36",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "37",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "38",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+        {
+      "id": "39",
+      "name": "Apple Watch Series 10",
+      "category": "Watches",
+      "subCategory": "Unisex",
+      "description": "Smartwatch with health and fitness tracking.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Watch"
+    },
+    {
+      "id": "40",
+      "name": "Nike Air Max",
+      "category": "Footwear",
+      "subCategory": "Male",
+      "description": "Comfortable running shoes for daily use.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Shoe"
+    },
+    {
+      "id": "41",
+      "name": "Ray-Ban Aviator",
+      "category": "Accessories",
+      "subCategory": "Unisex",
+      "description": "Classic aviator sunglasses.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
+    },
+    {
+      "id": "42",
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "subCategory": "Female",
+      "description": "Premium leather backpack for travel and work.",
+      "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
+      "modelCategory": "Ring"
     }
   ]
 }

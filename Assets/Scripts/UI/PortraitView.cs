@@ -5,11 +5,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PortraitView : MonoBehaviour , IDetailView, IHomeView
+public class PortraitView : MonoBehaviour, IDetailView, IHomeView
 {
     [Header("HomeScreenPanel")]
     [SerializeField] private Transform homeScreenPanel;
     [SerializeField] private Transform gridViewParent;
+    [SerializeField] private ScrollRect scrollRect;
+
 
     [Header("DetailScreenPanel")]
     [SerializeField] private Transform detailScreenPanel;
@@ -21,7 +23,23 @@ public class PortraitView : MonoBehaviour , IDetailView, IHomeView
     [SerializeField] private Button backButton;
     [SerializeField] private Button view3DButton;
 
+    //[Header("GridLayoutSettings")]
+    //[SerializeField] private int columns = 2;
+    //[SerializeField] private int poolSize = 12;
+    //private const float CellWidth = 465f;
+    //private const float CellHeight = 465f;
+    //private const float SpacingX = 50f;
+    //private const float SpacingY = 50f;
+    //private const float LeftPadding = 50f;
+    //private const float TopPadding = 100f;
+
+
+    public GridLayoutSettings laySet;
+   
     public Transform GridParent => gridViewParent;
+    public ScrollRect ScrollRect => scrollRect;
+
+    public GridLayoutSettings LayoutSettings => laySet;
 
     public event Action OnBackButtonRequested;
     public event Action OnView3DRequested;

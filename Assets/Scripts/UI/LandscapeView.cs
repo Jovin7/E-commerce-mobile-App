@@ -10,6 +10,8 @@ public class LandscapeView : MonoBehaviour, IDetailView, IHomeView
     [Header("HomeScreenPanel")]
     [SerializeField] private Transform homeScreenPanel;
     [SerializeField] private Transform gridViewParent;
+    [SerializeField] private ScrollRect scrollRect;
+
 
     [Header("DetailScreenPanel")]
     [SerializeField] private Transform detailScreenPanel;
@@ -20,7 +22,24 @@ public class LandscapeView : MonoBehaviour, IDetailView, IHomeView
     [SerializeField] private Image productImage;
     [SerializeField] private Button backButton;
     [SerializeField] private Button view3DButton;
+
+
+    [Header("GridLayoutSettings")]
+    [SerializeField] private int columns = 4;
+    [SerializeField] private int poolSize = 20;
+    [SerializeField] private const float CellWidth = 465f;
+    [SerializeField] private const float CellHeight = 465f;
+    [SerializeField] private const float SpacingX = 100f;
+    [SerializeField] private const float SpacingY = 100f;
+    [SerializeField] private const float LeftPadding = 200f;
+    [SerializeField] private const float TopPadding = 100f;
+    public GridLayoutSettings laySet;
+
     public Transform GridParent => gridViewParent;
+
+    public ScrollRect ScrollRect => scrollRect;
+
+    public GridLayoutSettings LayoutSettings => laySet;
 
     public event Action OnBackButtonRequested;
     public event Action OnView3DRequested;

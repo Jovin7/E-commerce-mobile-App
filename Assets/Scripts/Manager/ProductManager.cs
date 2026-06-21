@@ -18,7 +18,8 @@ public class ProductManager : MonoBehaviour
 
     public event Action<ProductDatabase> OnProductsLoaded;
 
-    public ProductData SelectedProduct = null;
+    public ProductData SelectedProduct;
+    public bool isSceneLoaded;
 
     private void Awake()
     {

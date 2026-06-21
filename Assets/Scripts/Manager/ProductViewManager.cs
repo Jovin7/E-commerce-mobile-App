@@ -10,7 +10,8 @@ public class ProductViewManager : MonoBehaviour
 
     void Start()
     {
-        foreach(var prefab in productPrefabList)
+        ProductManager.Instance.isSceneLoaded = true;
+        foreach (var prefab in productPrefabList)
         {
             if (ProductManager.Instance.SelectedProduct.modelCategory.ToLower() == prefab.productName.ToLower())
             {

@@ -11,6 +11,8 @@ public class LandscapeView : MonoBehaviour, IDetailView, IHomeView
     [SerializeField] private Transform homeScreenPanel;
     [SerializeField] private Transform gridViewParent;
     [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private Button filterButton;
+
 
 
     [Header("DetailScreenPanel")]
@@ -24,15 +26,21 @@ public class LandscapeView : MonoBehaviour, IDetailView, IHomeView
     [SerializeField] private Button view3DButton;
 
 
+
+    [Header("FilterScreenPanel")]
+    [SerializeField] private Transform filterScreenPanel;
+    [SerializeField] private FilterPanelView filterPanelView;
+
+
     [Header("GridLayoutSettings")]
-    [SerializeField] private int columns = 4;
-    [SerializeField] private int poolSize = 20;
-    [SerializeField] private const float CellWidth = 465f;
-    [SerializeField] private const float CellHeight = 465f;
-    [SerializeField] private const float SpacingX = 100f;
-    [SerializeField] private const float SpacingY = 100f;
-    [SerializeField] private const float LeftPadding = 200f;
-    [SerializeField] private const float TopPadding = 100f;
+    //[SerializeField] private int columns = 4;
+    //[SerializeField] private int poolSize = 20;
+    //[SerializeField] private const float CellWidth = 465f;
+    //[SerializeField] private const float CellHeight = 465f;
+    //[SerializeField] private const float SpacingX = 100f;
+    //[SerializeField] private const float SpacingY = 100f;
+    //[SerializeField] private const float LeftPadding = 200f;
+    //[SerializeField] private const float TopPadding = 100f;
     public GridLayoutSettings laySet;
 
     public Transform GridParent => gridViewParent;
@@ -41,16 +49,28 @@ public class LandscapeView : MonoBehaviour, IDetailView, IHomeView
 
     public GridLayoutSettings LayoutSettings => laySet;
 
+    public IFilterView FilterView => filterPanelView;
+
     public event Action OnBackButtonRequested;
     public event Action OnView3DRequested;
+    public event Action<bool> OnFilterButtonClicked;
 
     private void Awake()
     {
         backButton.onClick.AddListener(() => OnBackButtonRequested?.Invoke());
         view3DButton.onClick.AddListener(() => OnView3DRequested?.Invoke());
+        filterButton.onClick.AddListener(() => OnFilterButtonClicked?.Invoke(true));
+
+
     }
 
+    private void OnDisable()
+    {
+        backButton.onClick.RemoveListener(() => OnBackButtonRequested?.Invoke());
+        view3DButton.onClick.RemoveListener(() => OnView3DRequested?.Invoke());
+        filterButton.onClick.RemoveListener(() => OnFilterButtonClicked?.Invoke(true));
 
+    }
     public void SetProductInfo(ProductData data)
     {
         productName.text = data.name;
@@ -72,5 +92,10 @@ public class LandscapeView : MonoBehaviour, IDetailView, IHomeView
     public void SetDetailActive(bool isactive)
     {
         detailScreenPanel.gameObject.SetActive(isactive);
+    }
+
+    public void SetFilterScreenActive(bool isactive)
+    {
+        filterScreenPanel.gameObject.SetActive(isactive);
     }
 }

@@ -73,7 +73,8 @@ public class VirtualizedGridScrollView : MonoBehaviour
 
     private void OnDisable()
     {
-        scrollRect.onValueChanged.RemoveAllListeners();
+        if(scrollRect!=null)
+            scrollRect.onValueChanged.RemoveAllListeners();
 
     }
     public void CreatePool(ProductDatabase database)

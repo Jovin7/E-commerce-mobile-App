@@ -13,7 +13,7 @@
       "id": "2",
       "name": "Apple Watch Series 10",
       "category": "Watches",
-      "subCategory": "Unisex",
+      "subCategory": "Kids-Boy",
       "description": "Smartwatch with health and fitness tracking.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
@@ -21,7 +21,7 @@
     {
       "id": "3",
       "name": "Nike Air Max",
-      "category": "Footwear",
+      "category": "Clothes",
       "subCategory": "Male",
       "description": "Comfortable running shoes for daily use.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -30,8 +30,8 @@
     {
       "id": "4",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -39,7 +39,7 @@
     {
       "id": "5",
       "name": "Leather Backpack",
-      "category": "Bags",
+      "category": "Clothes",
       "subCategory": "Female",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -47,7 +47,7 @@
     },
      {
       "id": "6",
-      "name": "Rolex Submariner",
+      "name": "Rolex Submariner1",
       "category": "Watches",
       "subCategory": "Male",
       "description": "Luxury stainless steel diving watch.",
@@ -58,7 +58,7 @@
       "id": "7",
       "name": "Apple Watch Series 10",
       "category": "Watches",
-      "subCategory": "Unisex",
+      "subCategory": "Kids-Boy",
       "description": "Smartwatch with health and fitness tracking.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
@@ -66,7 +66,7 @@
     {
       "id": "8",
       "name": "Nike Air Max",
-      "category": "Footwear",
+      "category": "Clothes",
       "subCategory": "Male",
       "description": "Comfortable running shoes for daily use.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -75,8 +75,8 @@
     {
       "id": "9",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -84,7 +84,7 @@
     {
       "id": "10",
       "name": "Leather Backpack",
-      "category": "Bags",
+      "category": "Clothes",
       "subCategory": "Female",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -94,7 +94,7 @@
       "id": "11",
       "name": "Apple Watch Series 10",
       "category": "Watches",
-      "subCategory": "Unisex",
+      "subCategory": "Kids-Boy",
       "description": "Smartwatch with health and fitness tracking.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
@@ -102,7 +102,7 @@
     {
       "id": "12",
       "name": "Nike Air Max",
-      "category": "Footwear",
+      "category": "Clothes",
       "subCategory": "Male",
       "description": "Comfortable running shoes for daily use.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -111,8 +111,8 @@
     {
       "id": "13",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -120,7 +120,7 @@
     {
       "id": "14",
       "name": "Leather Backpack",
-      "category": "Bags",
+      "category": "Clothes",
       "subCategory": "Female",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -128,7 +128,7 @@
     },
      {
       "id": "16",
-      "name": "Rolex Submariner",
+      "name": "Rolex Submarine2r",
       "category": "Watches",
       "subCategory": "Male",
       "description": "Luxury stainless steel diving watch.",
@@ -139,7 +139,7 @@
       "id": "16",
       "name": "Apple Watch Series 10",
       "category": "Watches",
-      "subCategory": "Unisex",
+      "subCategory": "Kids-Boy",
       "description": "Smartwatch with health and fitness tracking.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
@@ -147,7 +147,7 @@
     {
       "id": "17",
       "name": "Nike Air Max",
-      "category": "Footwear",
+      "category": "Clothes",
       "subCategory": "Male",
       "description": "Comfortable running shoes for daily use.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -156,8 +156,8 @@
     {
       "id": "18",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -165,7 +165,7 @@
     {
       "id": "19",
       "name": "Leather Backpack",
-      "category": "Bags",
+      "category": "Clothes",
       "subCategory": "Female",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -174,8 +174,8 @@
      {
       "id": "20",
       "name": "Leather Backpack",
-      "category": "Bags",
-      "subCategory": "Female",
+      "category": "Clothes",
+      "subCategory": "Kids-Girl",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -183,8 +183,8 @@
     {
       "id": "21",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -192,8 +192,8 @@
     {
       "id": "22",
       "name": "Leather Backpack",
-      "category": "Bags",
-      "subCategory": "Female",
+      "category": "Clothes",
+      "subCategory": "Kids-Girl",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -202,7 +202,7 @@
       "id": "23",
       "name": "Apple Watch Series 10",
       "category": "Watches",
-      "subCategory": "Unisex",
+      "subCategory": "Kids-Boy",
       "description": "Smartwatch with health and fitness tracking.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
@@ -210,7 +210,7 @@
     {
       "id": "24",
       "name": "Nike Air Max",
-      "category": "Footwear",
+      "category": "Clothes",
       "subCategory": "Male",
       "description": "Comfortable running shoes for daily use.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -219,8 +219,8 @@
     {
       "id": "25",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -228,8 +228,8 @@
     {
       "id": "26",
       "name": "Leather Backpack",
-      "category": "Bags",
-      "subCategory": "Female",
+      "category": "Clothes",
+      "subCategory": "Kids-Girl",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -238,7 +238,7 @@
       "id": "27",
       "name": "Apple Watch Series 10",
       "category": "Watches",
-      "subCategory": "Unisex",
+      "subCategory": "Kids-Boy",
       "description": "Smartwatch with health and fitness tracking.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
@@ -246,7 +246,7 @@
     {
       "id": "28",
       "name": "Nike Air Max",
-      "category": "Footwear",
+      "category": "Clothes",
       "subCategory": "Male",
       "description": "Comfortable running shoes for daily use.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -255,8 +255,8 @@
     {
       "id": "29",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -264,15 +264,15 @@
     {
       "id": "30",
       "name": "Leather Backpack",
-      "category": "Bags",
-      "subCategory": "Female",
+      "category": "Clothes",
+      "subCategory": "Kids-Girl",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
     },
     {
       "id": "31",
-      "name": "Rolex Submariner",
+      "name": "Rolex Submarine3r",
       "category": "Watches",
       "subCategory": "Male",
       "description": "Luxury stainless steel diving watch.",
@@ -283,7 +283,7 @@
       "id": "32",
       "name": "Apple Watch Series 10",
       "category": "Watches",
-      "subCategory": "Unisex",
+      "subCategory": "Kids-Boy",
       "description": "Smartwatch with health and fitness tracking.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
@@ -291,7 +291,7 @@
     {
       "id": "33",
       "name": "Nike Air Max",
-      "category": "Footwear",
+      "category": "Clothes",
       "subCategory": "Male",
       "description": "Comfortable running shoes for daily use.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -300,8 +300,8 @@
     {
       "id": "34",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -309,8 +309,8 @@
     {
       "id": "35",
       "name": "Leather Backpack",
-      "category": "Bags",
-      "subCategory": "Female",
+      "category": "Clothes",
+      "subCategory": "Kids-Girl",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -318,7 +318,7 @@
      {
       "id": "36",
       "name": "Leather Backpack",
-      "category": "Bags",
+      "category": "Clothes",
       "subCategory": "Female",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -327,8 +327,8 @@
     {
       "id": "37",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -336,7 +336,7 @@
     {
       "id": "38",
       "name": "Leather Backpack",
-      "category": "Bags",
+      "category": "Clothes",
       "subCategory": "Female",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -346,7 +346,7 @@
       "id": "39",
       "name": "Apple Watch Series 10",
       "category": "Watches",
-      "subCategory": "Unisex",
+      "subCategory": "Kids-Boy",
       "description": "Smartwatch with health and fitness tracking.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Watch"
@@ -354,7 +354,7 @@
     {
       "id": "40",
       "name": "Nike Air Max",
-      "category": "Footwear",
+      "category": "Clothes",
       "subCategory": "Male",
       "description": "Comfortable running shoes for daily use.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
@@ -363,8 +363,8 @@
     {
       "id": "41",
       "name": "Ray-Ban Aviator",
-      "category": "Accessories",
-      "subCategory": "Unisex",
+      "category": "Jewellery",
+      "subCategory": "Kids-Boy",
       "description": "Classic aviator sunglasses.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",
       "modelCategory": "Ring"
@@ -372,7 +372,7 @@
     {
       "id": "42",
       "name": "Leather Backpack",
-      "category": "Bags",
+      "category": "Clothes",
       "subCategory": "Female",
       "description": "Premium leather backpack for travel and work.",
       "thumbnailURL": "https://res.cloudinary.com/di8xsmz2n/image/upload/Boy_k6x9o8.jpg",

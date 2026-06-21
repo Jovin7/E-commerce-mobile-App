@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,13 +13,20 @@ public class UIController : MonoBehaviour
     [SerializeField] private PortraitView portraitView;
     [SerializeField] private LandscapeView landscapeView;
     [SerializeField] private ProductCardView productCardPrefab;
-    [SerializeField] private VirtualizedGridScrollView virtualizedGridScroll;
+    [SerializeField] private VirtualizedGridScrollView homeScreenScroll;
+    [SerializeField] private VirtualizedGridScrollView FilterScreenScroll;
+
 
     private IHomeView activeHomeView;
     private IDetailView activeDetailView;
+    private IFilterView activeFilterView;
+
 
     private ProductData selectedProduct;
     private IThumbnailLoaderService thumbnailLoaderService;
+
+    private readonly FilterState appliedFilterState = new FilterState();
+    private readonly FilterState draftFilterState = new FilterState();
 
 
     private void Awake()
@@ -29,19 +37,39 @@ public class UIController : MonoBehaviour
 
         activeHomeView = isLandscape ? (IHomeView)landscapeView : portraitView;
         activeDetailView = isLandscape ? (IDetailView)landscapeView : portraitView;
+        activeFilterView = activeHomeView.FilterView;
+
     }
     private void OnEnable()
     {
         ProductManager.Instance.OnProductsLoaded += PopulateGrid;
         activeDetailView.OnBackButtonRequested += OnBackButtonClicked;
         activeDetailView.OnView3DRequested += OnView3DClicked;
+        activeHomeView.OnFilterButtonClicked += OnFilterButtonClicked;
+        activeFilterView.OnCategorySelected += OnFilterCategorySelected;
+        activeFilterView.OnSubCategorySelected += OnFilterSubCategorySelected;
+        activeFilterView.OnItemToggled += OnFilterItemToggled;
+        activeFilterView.OnResetClicked += OnFilterResetClicked;
+        activeFilterView.OnCloseClicked += OnFilterCloseClicked;
+        activeFilterView.OnApplyClicked += OnFilterApplyClicked;
+
     }
+
+
 
     private void OnDisable()
     {
         ProductManager.Instance.OnProductsLoaded -= PopulateGrid;
         activeDetailView.OnBackButtonRequested -= OnBackButtonClicked;
         activeDetailView.OnView3DRequested -= OnView3DClicked;
+        activeHomeView.OnFilterButtonClicked -= OnFilterButtonClicked;
+        activeFilterView.OnCategorySelected -= OnFilterCategorySelected;
+        activeFilterView.OnSubCategorySelected -= OnFilterSubCategorySelected;
+        activeFilterView.OnItemToggled -= OnFilterItemToggled;
+        activeFilterView.OnResetClicked -= OnFilterResetClicked;
+        activeFilterView.OnCloseClicked -= OnFilterCloseClicked;
+        activeFilterView.OnApplyClicked -= OnFilterApplyClicked;
+
     }
     void Start()
     {
@@ -56,7 +84,13 @@ public class UIController : MonoBehaviour
 
     private void PopulateGrid(ProductDatabase database)
     {
-        virtualizedGridScroll.Initialize(database, productCardPrefab,activeHomeView.GridParent, activeHomeView.ScrollRect, thumbnailLoaderService, OnItemSelected,activeHomeView.LayoutSettings);
+        homeScreenScroll.Initialize(database,
+                                    productCardPrefab,
+                                    activeHomeView.GridParent,
+                                    activeHomeView.ScrollRect,
+                                    thumbnailLoaderService,
+                                    OnItemSelected,
+                                    activeHomeView.LayoutSettings);
     }
 
   
@@ -100,5 +134,84 @@ public class UIController : MonoBehaviour
 
         activeDetailView.SetDetailActive(v);
         activeHomeView.SetHomeActive(!v);
+    }
+    private void OnFilterButtonClicked(bool v)
+    {
+        activeHomeView.SetFilterScreenActive(v);
+    }
+
+    private void OnFilterButtonClicked()
+    {
+        draftFilterState.CopyFrom(appliedFilterState);
+        activeFilterView.ResetUI();
+        activeFilterView.RefreshSelectionState(draftFilterState);
+        activeHomeView.SetFilterScreenActive(true);
+    }
+
+    private void OnFilterCategorySelected(string category)
+    {
+        draftFilterState.Category = category;
+        draftFilterState.SubCategory = null;
+        draftFilterState.SelectedItemIds.Clear();
+        activeFilterView.ShowSubCategoryGroup(true);
+        activeFilterView.RefreshSelectionState(draftFilterState);
+    }
+
+    private void OnFilterSubCategorySelected(string subCategory)
+    {
+        draftFilterState.SubCategory = subCategory;
+        draftFilterState.SelectedItemIds.Clear();
+
+        var matches = ProductManager.Instance.data.products
+            .Where(p => p.category == draftFilterState.Category && p.subCategory == subCategory)
+            .ToList();
+
+        activeFilterView.DisplayFilteredItems(matches, draftFilterState);
+        activeFilterView.RefreshSelectionState(draftFilterState);
+    }
+    private void OnFilterItemToggled(string itemId, bool isOn)
+    {
+        if (isOn) draftFilterState.SelectedItemIds.Add(itemId);
+        else draftFilterState.SelectedItemIds.Remove(itemId);
+    }
+
+    private void OnFilterResetClicked()
+    {
+        draftFilterState.Reset();
+        activeFilterView.ResetUI();
+    }
+
+    private void OnFilterCloseClicked()
+    {
+        // unsaved draft changes are simply discarded, appliedFilterState is untouched
+        activeHomeView.SetFilterScreenActive(false);
+    }
+
+    private void OnFilterApplyClicked()
+    {
+        appliedFilterState.CopyFrom(draftFilterState);
+
+        var filteredProducts = ApplyFilter(ProductManager.Instance.data.products, appliedFilterState);
+        var filteredDatabase = new ProductDatabase
+        {
+            products = filteredProducts.ToList() // swap to .ToArray() if products is an array, not a List
+        };
+
+        PopulateGrid(filteredDatabase);
+        activeHomeView.SetFilterScreenActive(false);
+    }
+
+    private IReadOnlyList<ProductData> ApplyFilter(IReadOnlyList<ProductData> source, FilterState state)
+    {
+        IEnumerable<ProductData> result = source;
+
+        if (state.HasCategory)
+            result = result.Where(p => p.category == state.Category);
+        if (state.HasSubCategory)
+            result = result.Where(p => p.subCategory == state.SubCategory);
+        if (state.SelectedItemIds.Count > 0)
+            result = result.Where(p => state.SelectedItemIds.Contains(p.name));
+
+        return result.ToList();
     }
 }

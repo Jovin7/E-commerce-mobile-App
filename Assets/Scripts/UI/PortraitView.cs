@@ -11,7 +11,11 @@ public class PortraitView : MonoBehaviour, IDetailView, IHomeView
     [SerializeField] private Transform homeScreenPanel;
     [SerializeField] private Transform gridViewParent;
     [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private Button filterButton;
 
+    [Header("FilterScreenPanel")]
+    [SerializeField] private Transform filterScreenPanel;
+    [SerializeField] private FilterPanelView filterPanelView;
 
     [Header("DetailScreenPanel")]
     [SerializeField] private Transform detailScreenPanel;
@@ -22,6 +26,8 @@ public class PortraitView : MonoBehaviour, IDetailView, IHomeView
     [SerializeField] private Image productImage;
     [SerializeField] private Button backButton;
     [SerializeField] private Button view3DButton;
+
+  
 
     //[Header("GridLayoutSettings")]
     //[SerializeField] private int columns = 2;
@@ -41,15 +47,27 @@ public class PortraitView : MonoBehaviour, IDetailView, IHomeView
 
     public GridLayoutSettings LayoutSettings => laySet;
 
+    public IFilterView FilterView => filterPanelView;
+
     public event Action OnBackButtonRequested;
     public event Action OnView3DRequested;
+    public event Action<bool> OnFilterButtonClicked;
 
     private void Awake()
     {
         backButton.onClick.AddListener(() => OnBackButtonRequested?.Invoke());
         view3DButton.onClick.AddListener(() => OnView3DRequested?.Invoke());
+        filterButton.onClick.AddListener(() => OnFilterButtonClicked?.Invoke(true));
+
     }
-   
+
+    private void OnDisable()
+    {
+        backButton.onClick.RemoveListener(() => OnBackButtonRequested?.Invoke());
+        view3DButton.onClick.RemoveListener(() => OnView3DRequested?.Invoke());
+        filterButton.onClick.RemoveListener(() => OnFilterButtonClicked?.Invoke(true));
+
+    }
 
     public void SetProductInfo(ProductData data)
     {
@@ -73,4 +91,12 @@ public class PortraitView : MonoBehaviour, IDetailView, IHomeView
     {
         detailScreenPanel.gameObject.SetActive(isactive);
     }
+    public void SetFilterScreenActive(bool isactive)
+    {
+        filterScreenPanel.gameObject.SetActive(isactive);
+    }
+
+   
+
+
 }

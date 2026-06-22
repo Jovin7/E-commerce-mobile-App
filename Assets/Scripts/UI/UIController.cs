@@ -93,12 +93,6 @@ public class UIController : MonoBehaviour
                                     activeHomeView.LayoutSettings);
     }
 
-  
-    private void Update()
-    {
-
-       
-    }
     
     private async void OnItemSelected(ProductData data)
     {
@@ -183,7 +177,6 @@ public class UIController : MonoBehaviour
 
     private void OnFilterCloseClicked()
     {
-        // unsaved draft changes are simply discarded, appliedFilterState is untouched
         activeHomeView.SetFilterScreenActive(false);
     }
 
@@ -194,7 +187,7 @@ public class UIController : MonoBehaviour
         var filteredProducts = ApplyFilter(ProductManager.Instance.data.products, appliedFilterState);
         var filteredDatabase = new ProductDatabase
         {
-            products = filteredProducts.ToList() // swap to .ToArray() if products is an array, not a List
+            products = filteredProducts.ToList() 
         };
 
         PopulateGrid(filteredDatabase);

@@ -5,6 +5,11 @@ using UnityEngine;
 
 public interface IFilterView
 {
+    void ShowSubCategoryGroup(bool show);
+    void DisplayFilteredItems(IReadOnlyList<ProductData> items, FilterState currentState);
+    void RefreshSelectionState(FilterState state);
+    void ResetUI();
+
     event Action<string> OnCategorySelected;
     event Action<string> OnSubCategorySelected;
     event Action<string, bool> OnItemToggled;
@@ -12,8 +17,4 @@ public interface IFilterView
     event Action OnCloseClicked;
     event Action OnApplyClicked;
 
-    void ShowSubCategoryGroup(bool show);
-    void DisplayFilteredItems(IReadOnlyList<ProductData> items, FilterState currentState);
-    void RefreshSelectionState(FilterState state);
-    void ResetUI();
 }

@@ -31,7 +31,9 @@ public class UIController : MonoBehaviour
 
     private void Awake()
     {
-        bool isLandscape = Screen.width > Screen.height;
+        float aspectRatio = (float)Screen.width / Screen.height;
+    
+        bool isLandscape = aspectRatio > 1.3f;
         portraitView.gameObject.SetActive(!isLandscape);
         landscapeView.gameObject.SetActive(isLandscape);
 

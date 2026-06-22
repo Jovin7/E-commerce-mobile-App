@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Item2
   m_EditorClassIdentifier: 
   productName: Shoe
-  modelPrefab: {fileID: 5045434422584974326, guid: 3708cf99d2f8ab24781e56c30777107e,
+  modelPrefab: {fileID: 8375352113746575200, guid: 718d9eaa6df7a17418a1fd8727b0352a,
     type: 3}

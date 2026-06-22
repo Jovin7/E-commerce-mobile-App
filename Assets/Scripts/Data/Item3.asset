@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Item3
   m_EditorClassIdentifier: 
   productName: Watch
-  modelPrefab: {fileID: 4480463986462280555, guid: 1968e42de05edf34483756b653c29a65,
+  modelPrefab: {fileID: 4647328068242442402, guid: dedd3e630fa2b6b438ab8af7b849f19c,
     type: 3}

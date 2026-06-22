@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Item1
   m_EditorClassIdentifier: 
   productName: Ring
-  modelPrefab: {fileID: 3897340575991649034, guid: 1c7bbd34b14ac4b44a10483e5cfec03e,
+  modelPrefab: {fileID: 1764993963647251164, guid: 3484ca2cab613d046b3c5fee6e4d383c,
     type: 3}

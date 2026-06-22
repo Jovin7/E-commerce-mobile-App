@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class FilterPanelView : MonoBehaviour, IFilterView
 {
+    private RectTransform filterPanel;
     [Header("Category")]
     [SerializeField] private ToggleGroup categoryToggleGroup;
     [SerializeField] private Toggle watchesToggle;
@@ -40,7 +41,7 @@ public class FilterPanelView : MonoBehaviour, IFilterView
 
     private void Awake()
     {
-  
+        filterPanel = this.GetComponent<RectTransform>();
         watchesToggle.onValueChanged.AddListener(isOn => { if (isOn) OnCategorySelected?.Invoke("Watches"); });
         clothesToggle.onValueChanged.AddListener(isOn => { if (isOn) OnCategorySelected?.Invoke("Clothes"); });
         jewelleryToggle.onValueChanged.AddListener(isOn => { if (isOn) OnCategorySelected?.Invoke("Jewellery"); });
@@ -54,7 +55,14 @@ public class FilterPanelView : MonoBehaviour, IFilterView
         closeButton.onClick.AddListener(() => OnCloseClicked?.Invoke());
         applyButton.onClick.AddListener(() => OnApplyClicked?.Invoke());
     }
+    private void OnEnable()
+    {
+       filterPanel.anchoredPosition = new Vector2(filterPanel.rect.width, 0);
 
+        LeanTween.move(filterPanel, Vector2.zero, 0.5f).setEaseOutCubic();
+
+    }
+  
     public void ShowSubCategoryGroup(bool show) => subCategoryGroup.SetActive(show);
 
     public void DisplayFilteredItems(IReadOnlyList<ProductData> items, FilterState currentState)

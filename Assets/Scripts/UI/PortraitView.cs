@@ -14,7 +14,7 @@ public class PortraitView : MonoBehaviour, IDetailView, IHomeView
     [SerializeField] private Button filterButton;
 
     [Header("FilterScreenPanel")]
-    [SerializeField] private Transform filterScreenPanel;
+    [SerializeField] private RectTransform filterScreenPanel;
     [SerializeField] private FilterPanelView filterPanelView;
 
     [Header("DetailScreenPanel")]
@@ -93,7 +93,11 @@ public class PortraitView : MonoBehaviour, IDetailView, IHomeView
     }
     public void SetFilterScreenActive(bool isactive)
     {
-        filterScreenPanel.gameObject.SetActive(isactive);
+        LeanTween.move(filterScreenPanel, new Vector2(filterScreenPanel.rect.width, 0), 0.5f).setEaseInCubic().setOnComplete(() =>
+        {
+            filterScreenPanel.gameObject.SetActive(isactive);
+
+        });
     }
 
    

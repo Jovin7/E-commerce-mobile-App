@@ -6,16 +6,29 @@ using UnityEngine.UI;
 
 public class ProductSceneUIController : MonoBehaviour
 {
-    [SerializeField] private Button backButton;
+
+    [SerializeField] private ProductPortrait portraitView;
+    [SerializeField] private ProductLandscape landscapeView;
+
+    private IProductView activeProductView;
+
+    private void Awake()
+    {
+        bool isLandscape = Screen.width > Screen.height;
+        portraitView.gameObject.SetActive(!isLandscape);
+        landscapeView.gameObject.SetActive(isLandscape);
+
+        activeProductView = isLandscape ? (IProductView)landscapeView : portraitView;
+    }
     private void OnEnable()
     {
-        backButton.onClick.AddListener(OnBackButtonClicked);
+        activeProductView.OnBackButtonClicked += OnBackButtonClicked;
     }
 
+  
     private void OnDisable()
     {
-        backButton.onClick.RemoveListener(OnBackButtonClicked);
-
+        activeProductView.OnBackButtonClicked -= OnBackButtonClicked;
     }
 
     public void OnBackButtonClicked()

@@ -218,46 +218,35 @@ public class UIController : MonoBehaviour
 
     private IReadOnlyList<ProductData> ApplyFilter(IReadOnlyList<ProductData> source, FilterState state)
     {
-        List<ProductData> result = new();
+        IEnumerable<ProductData> result = source;
 
         if (state.HasCategory)
-            result = (List<ProductData>)source.Where(p => p.category == state.Category);
+            result = result.Where(p => p.category == state.Category);
         if (state.HasSubCategory)
-            result = (List<ProductData>)result.Where(p => p.subCategory == state.SubCategory);
+            result = result.Where(p => p.subCategory == state.SubCategory);
         if (state.SelectedItemIds.Count > 0)
-            result = (List<ProductData>)result.Where(p => state.SelectedItemIds.Contains(p.name));
+            result = result.Where(p => state.SelectedItemIds.Contains(p.name));
        
         if (state.HasSearchtext)
         {
             Debug.Log(state.SearchTText);
-            return SearchQueryList(result, state.SearchTText);
+            return SearchQueryList(result.ToList(), state.SearchTText);
         }
         else
         {
-            return result;
+            return result.ToList();
         }
 
        
     }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            foreach (var a in filteredlist)
-            {
-                Debug.Log(a.name);
-
-            }
-            
-        }
-    }
+   
 
     private List<ProductData> SearchQueryList(List<ProductData> data, string searchkeyword)
     {
         filteredlist.Clear();
         foreach (var a in data)
         {
-            if (a.name.Contains(searchkeyword))
+            if (a.name.Contains(searchkeyword,StringComparison.OrdinalIgnoreCase))
                 filteredlist.Add(a);
 
         }

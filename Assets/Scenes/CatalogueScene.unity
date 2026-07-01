@@ -1149,6 +1149,7 @@ MonoBehaviour:
   gridViewParent: {fileID: 2009499300}
   scrollRect: {fileID: 1203493228}
   filterButton: {fileID: 928802605}
+  searchInput: {fileID: 1997696924}
   detailScreenPanel: {fileID: 914219705}
   productName: {fileID: 1412276867}
   category: {fileID: 284945988}
@@ -8599,8 +8600,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11198,6 +11199,7 @@ MonoBehaviour:
   gridViewParent: {fileID: 1814469412}
   scrollRect: {fileID: 1498480844}
   filterButton: {fileID: 1373106274}
+  searchInput: {fileID: 1473114721}
   filterScreenPanel: {fileID: 295313053}
   filterPanelView: {fileID: 295313056}
   detailScreenPanel: {fileID: 339217496}
@@ -11499,7 +11501,7 @@ MonoBehaviour:
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 0
   m_RegexValue: 
-  m_GlobalPointSize: 14
+  m_GlobalPointSize: 50
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:

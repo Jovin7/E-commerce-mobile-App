@@ -9,11 +9,14 @@ public interface IHomeView
     Transform GridParent { get; }
     ScrollRect ScrollRect { get; }
     GridLayoutSettings LayoutSettings { get; }
+
     void SetHomeActive(bool isactive);
     void SetFilterScreenActive(bool isactive);
 
 
     event Action<bool> OnFilterButtonClicked;
+    event Action<string> OnSearchValueChanged;
+
     IFilterView FilterView { get; }
 
 

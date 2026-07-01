@@ -12,6 +12,7 @@ public class PortraitView : MonoBehaviour, IDetailView, IHomeView
     [SerializeField] private Transform gridViewParent;
     [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private Button filterButton;
+    [SerializeField] private TMP_InputField searchInput;
 
     [Header("FilterScreenPanel")]
     [SerializeField] private RectTransform filterScreenPanel;
@@ -52,12 +53,14 @@ public class PortraitView : MonoBehaviour, IDetailView, IHomeView
     public event Action OnBackButtonRequested;
     public event Action OnView3DRequested;
     public event Action<bool> OnFilterButtonClicked;
+    public event Action<string> OnSearchValueChanged;
 
     private void Awake()
     {
         backButton.onClick.AddListener(() => OnBackButtonRequested?.Invoke());
         view3DButton.onClick.AddListener(() => OnView3DRequested?.Invoke());
         filterButton.onClick.AddListener(() => OnFilterButtonClicked?.Invoke(true));
+        searchInput.onValueChanged.AddListener(value => OnSearchValueChanged?.Invoke(value));
 
     }
 

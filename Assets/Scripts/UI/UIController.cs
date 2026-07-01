@@ -28,7 +28,7 @@ public class UIController : MonoBehaviour
     private readonly FilterState appliedFilterState = new FilterState();
     private readonly FilterState draftFilterState = new FilterState();
 
-
+    public List<ProductData> filteredlist = new();
     private void Awake()
     {
         float aspectRatio = (float)Screen.width / Screen.height;
@@ -54,10 +54,11 @@ public class UIController : MonoBehaviour
         activeFilterView.OnResetClicked += OnFilterResetClicked;
         activeFilterView.OnCloseClicked += OnFilterCloseClicked;
         activeFilterView.OnApplyClicked += OnFilterApplyClicked;
+        activeHomeView.OnSearchValueChanged += ActiveHomeView_OnSearchValueChanged;
 
     }
 
-
+   
 
     private void OnDisable()
     {
@@ -71,6 +72,8 @@ public class UIController : MonoBehaviour
         activeFilterView.OnResetClicked -= OnFilterResetClicked;
         activeFilterView.OnCloseClicked -= OnFilterCloseClicked;
         activeFilterView.OnApplyClicked -= OnFilterApplyClicked;
+        activeHomeView.OnSearchValueChanged += ActiveHomeView_OnSearchValueChanged;
+
 
     }
     void Start()
@@ -83,7 +86,7 @@ public class UIController : MonoBehaviour
         }
     }
 
-
+  
     private void PopulateGrid(ProductDatabase database)
     {
         homeScreenScroll.Initialize(database,
@@ -181,7 +184,24 @@ public class UIController : MonoBehaviour
     {
         activeHomeView.SetFilterScreenActive(false);
     }
+    private void ActiveHomeView_OnSearchValueChanged(string seachInput)
+    {
+        Debug.Log("ActiveHomeView_OnSearchValueChanged" + seachInput);
+        draftFilterState.SearchTText = seachInput;
+        appliedFilterState.CopyFrom(draftFilterState);
+        var filteredProducts = ApplyFilter(ProductManager.Instance.data.products, appliedFilterState);
+        var filteredDatabase = new ProductDatabase
+        {
+            products = filteredProducts.ToList()
+        };
+        //foreach(var a in filteredDatabase.products)
+        //{
 
+        //    Debug.Log(a.name);
+        //}
+
+        PopulateGrid(filteredDatabase);
+    }
     private void OnFilterApplyClicked()
     {
         appliedFilterState.CopyFrom(draftFilterState);
@@ -191,22 +211,57 @@ public class UIController : MonoBehaviour
         {
             products = filteredProducts.ToList() 
         };
-
+        
         PopulateGrid(filteredDatabase);
         activeHomeView.SetFilterScreenActive(false);
     }
 
     private IReadOnlyList<ProductData> ApplyFilter(IReadOnlyList<ProductData> source, FilterState state)
     {
-        IEnumerable<ProductData> result = source;
+        List<ProductData> result = new();
 
         if (state.HasCategory)
-            result = result.Where(p => p.category == state.Category);
+            result = (List<ProductData>)source.Where(p => p.category == state.Category);
         if (state.HasSubCategory)
-            result = result.Where(p => p.subCategory == state.SubCategory);
+            result = (List<ProductData>)result.Where(p => p.subCategory == state.SubCategory);
         if (state.SelectedItemIds.Count > 0)
-            result = result.Where(p => state.SelectedItemIds.Contains(p.name));
+            result = (List<ProductData>)result.Where(p => state.SelectedItemIds.Contains(p.name));
+       
+        if (state.HasSearchtext)
+        {
+            Debug.Log(state.SearchTText);
+            return SearchQueryList(result, state.SearchTText);
+        }
+        else
+        {
+            return result;
+        }
 
-        return result.ToList();
+       
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            foreach (var a in filteredlist)
+            {
+                Debug.Log(a.name);
+
+            }
+            
+        }
+    }
+
+    private List<ProductData> SearchQueryList(List<ProductData> data, string searchkeyword)
+    {
+        filteredlist.Clear();
+        foreach (var a in data)
+        {
+            if (a.name.Contains(searchkeyword))
+                filteredlist.Add(a);
+
+        }
+       // Debug.Log(filteredlist.Count);
+        return filteredlist;
     }
 }

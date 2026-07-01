@@ -118,6 +118,7 @@ public class VirtualizedGridScrollView : MonoBehaviour
         currentStartIndex = startIndex;
 
         RebindPool(startIndex, topRow);
+        Debug.Log("UpdateVisibleCells");
     }
 
     private void RebindPool(int startIndex, int topRow)
